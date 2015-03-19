@@ -1,0 +1,62 @@
+{
+	"segments": {
+		"left": [
+			{
+				"function": "powerline.segments.common.time.date",
+				"args": {
+        			"format": "%H:%M",
+        			"istime": true
+				}
+			},
+			{
+				"function": "powerline.segments.common.net.hostname",
+				"priority": 10
+			},
+			{
+				"function": "powerline.segments.common.env.virtualenv",
+				"priority": 50
+			},
+			{
+				"function": "powerline.segments.shell.cwd",
+				"priority": 10
+			},
+			{
+				"function": "powerline.segments.dbh.mygit.git",
+				"args": {
+			    	"use_path_separator": true,
+			    	"icons":{
+			    		"branch": " ",
+
+					    "upstream": " ",
+					    "will_merge": " ",
+					    "will_rebase": " ",
+					    "behind": " ",
+					    "ahead": " ",
+					    "diverged": " ",
+					    "can_fast_forward": " ",
+					    "should_push": " ",
+					    "deatached_head": " ",
+
+					    "staged": " ",
+					    "added":  " ",
+					    "modified": " ",
+					    "modified_cached": " ",
+					    "deleted":  " ",
+					    "deleted_cached":  " ",
+					    "untracked": " ",
+						"renamed":  " ",
+						"renamed_cached":  " ",
+					    "tag": " ",
+					    "stashed": " "
+					}
+				}
+			}
+		],
+		"right": [
+			{
+				"function": "powerline.segments.shell.last_pipe_status",
+				"priority": 10
+			}
+		]
+	}
+}

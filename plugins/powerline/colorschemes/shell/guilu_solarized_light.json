@@ -1,0 +1,65 @@
+{
+        "name": "DiegoBarrioH colors for solarized dark terminal colors",
+        "groups": {
+                "date":               { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "time:divider":       { "fg": "solarized:base3", "bg": "solarized:base2" },
+
+                "user":               { "fg": "oldlace", "bg": "blue" },
+                "superuser":          { "fg": "oldlace", "bg": "red", "attr": ["bold"] },
+                "virtualenv":         { "fg": "oldlace", "bg": "green" },
+                "branch:divider":     { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "cwd":                { "fg": "blue", "bg": "solarized:base2" },
+                "cwd:current_folder": { "fg": "solarized:violet", "bg": "solarized:base2" },
+                "cwd:divider":        { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "hostname":           { "fg": "oldlace", "bg": "cyan" },
+                "exit_fail":          { "fg": "darkestred", "bg": "red" },
+                "exit_success":       { "fg": "oldlace", "bg": "green" },
+                "environment":        { "fg": "oldlace", "bg": "green" },
+                "external_ip":        { "fg": "oldlace", "bg": "green" },
+
+                "fuzzy_time":         { "fg": "oldlace", "bg": "green" },
+                "battery_gradient":   { "fg": "oldlace", "bg": "green" },
+                "battery":            { "fg": "oldlace", "bg": "green" },
+
+                "weather_condition_mostly_cloudy_night":    { "fg": "oldlace", "bg": "green" },
+                "weather_condition_cloudy":                 { "fg": "oldlace", "bg": "green" },
+                "weather_conditions":                       { "fg": "oldlace", "bg": "green" },
+                "weather":                                  { "fg": "oldlace", "bg": "green" },
+
+                "branch":                            { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "branch_dirty":                      { "fg": "solarized:base3", "bg": "brightestorange" },
+                "branch_clean":                      { "fg": "solarized:base3", "bg": "green" },
+                "added":                             { "fg": "solarized:base3", "bg": "blue" },
+                "staged":                            { "fg": "solarized:base3", "bg": "green" },
+                "staged_ready_to_commit":            { "fg": "solarized:base3", "bg": "brightgreen" },
+                "staged_info":                       { "fg": "solarized:base3", "bg": "green" },
+                "modified":                          { "fg": "solarized:base3", "bg": "yellow" },
+                "modified_cached":                   { "fg": "solarized:base3", "bg": "green" },
+                "renamed":                           { "fg": "yellow", "bg": "solarized:base2" },
+                "deleted":                           { "fg": "solarized:base3", "bg": "red" },
+                "deleted_cached":                    { "fg": "solarized:base3", "bg": "red" },
+                "untracked":                         { "fg": "solarized:base3", "bg": "solarized:cyan" },
+                "tagged":                            { "fg": "solarized:base3", "bg": "brightestorange" },
+                "stashed":                           { "fg": "solarized:base3", "bg": "darkblue" },
+                "deatached":                         { "fg": "red", "bg": "red" },
+                "commits:behind":                    { "fg": "yellow", "bg": "brightyellow" },
+
+                "commits:ahead":                     { "fg": "solarized:base02", "bg": "brightgreen" },
+
+                "upstream":                          { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "diverged":                          { "fg": "yellow", "bg": "brightyellow" },
+                "deatached_head":                    { "fg": "darkestred", "bg": "red" },
+
+                "system_load_gradient":              { "fg": "red", "bg": "solarized:base2" },
+                "cpu_load_percent_gradient":         { "fg": "GREEN_Orange_red", "bg": "solarized:base2" },
+
+                "uptime":                            { "fg": "yellow", "bg": "solarized:base2" },
+                "background:divider":                { "fg": "solarized:base3", "bg": "solarized:base2" },
+
+                "network_load_recv":                    { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "network_load_sent_gradient":           { "fg": "solarized:base3", "bg": "dark_GREEN_Orange_red"},
+                "network_load":                         { "fg": "solarized:base3", "bg": "solarized:base2" },
+                "osx_battery":                          { "fg": "yellow", "bg": "solarized:base2" }
+
+        }
+}
