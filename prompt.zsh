@@ -1,0 +1,1 @@
+. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh

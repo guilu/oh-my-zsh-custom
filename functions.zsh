@@ -1,8 +1,4 @@
-# Create a new directory and enter it
-function md() {
-	mkdir -p "$@" && cd "$@"
-}
-
+# Create a new directory and enter it (take)
 
 # find shorthand
 function f() {

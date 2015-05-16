@@ -20,6 +20,7 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achievements
+alias sf='symfony'
 
 
 
@@ -117,3 +118,9 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
 alias httpdconf='sudo $EDITOR /etc/apache2/httpd.conf'
+alias phpini='sudo $EDITOR /usr/local/etc/php/5.6/php.ini'
+alias csu='composer self-update'
+alias sfu='symfony self-update'
+
+alias jboss='/usr/local/Cellar/jboss/jboss-eap-6.2/bin/standalone.sh'
+alias mysql='/usr/local/mysql/bin/mysql'

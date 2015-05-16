@@ -27,7 +27,7 @@
 			    	"icons":{
 			    		"branch": " ",
 
-					    "upstream": " ",
+					    "upstream": "  ",
 					    "will_merge": " ",
 					    "will_rebase": " ",
 					    "behind": " ",
