@@ -34,12 +34,24 @@ alias gurl="curl --compressed"
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+#alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+#alias localip="ipconfig getifaddr en1"
+#alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="(\
+	(echo 'wired   ' && \
+		([ ! -z $(ipconfig getifaddr en1) ] && echo '•' && ipconfig getifaddr en1 && echo '') || \
+		echo '• -' \
+	) | tr '\n' ' '\
+) && echo '' && (\
+	(echo 'wireless' && \
+		([ ! -z $(ipconfig getifaddr en0) ] && echo '•' && ipconfig getifaddr en0 && echo '') || \
+		echo '• -' \
+	) | tr '\n' ' '\
+) && echo ''"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
@@ -124,3 +136,6 @@ alias sfu='symfony self-update'
 
 alias jboss='/usr/local/Cellar/jboss/jboss-eap-6.2/bin/standalone.sh'
 alias mysql='/usr/local/mysql/bin/mysql'
+
+#safety first
+alias rm='rm -i'
