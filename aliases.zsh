@@ -21,6 +21,7 @@ alias o="open"
 alias oo="open ."
 alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achievements
 alias sf='symfony'
+alias tree='tree -C'
 
 
 

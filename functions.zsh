@@ -316,3 +316,29 @@ function backup(){
     echo "usage backup [username] [f for full or i for incremental]"
   fi
 }
+
+function speedtest(){
+  #prueba la velocidad de descarga. 3 tamaños:
+  #http://speedtest.wdc01.softlayer.com/downloads/test10.zip -> 10M
+  #http://speedtest.wdc01.softlayer.com/downloads/test100.zip -> 100M
+  #http://speedtest.wdc01.softlayer.com/downloads/test1000.zip --> 1G
+  if [[ -n "$1" ]]; then
+    case "$1" in
+      "10")
+        wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
+        ;;
+      "100")
+        wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip
+        ;;
+      "1000")
+        wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip
+        ;;
+      *)
+        echo "Los tamaños permitidos son 10,100 o 1000" >&2
+        ;;
+    esac
+  else
+       echo $'Indica el tamaño del fichero de prueba: speedtest <tam> \n\tDonde tam es 10,100,1000.' >&2
+  fi
+  
+}
