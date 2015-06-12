@@ -23,6 +23,8 @@ alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achie
 alias sf='symfony'
 alias tree='tree -C'
 
+ alias zshconfig="subl ~/.zshrc"
+ alias ohmyzsh="subl ~/.oh-my-zsh"
 
 
 # Enable aliases to be sudo’ed
