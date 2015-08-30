@@ -135,7 +135,7 @@ alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
 alias httpdconf='sudo $EDITOR /etc/apache2/httpd.conf'
 alias phpini='sudo $EDITOR /usr/local/etc/php/5.6/php.ini'
 alias csu='composer self-update'
-alias sfu='symfony self-update'
+alias sfu='sudo symfony self-update'
 
 alias jboss='/usr/local/Cellar/jboss/jboss-eap-6.2/bin/standalone.sh'
 alias mysql='/usr/local/mysql/bin/mysql'
