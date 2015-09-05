@@ -1,4 +1,4 @@
-export EDITOR='vim'
+export EDITOR='subl'
 
 #PYTHON(powerline)
 export PATH=$PATH:/Users/diegobarrioh/Library/Python/2.7/bin
