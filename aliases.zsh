@@ -1,3 +1,6 @@
+export EDITOR='vim'
+export VEDITOR='subl'
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -21,11 +24,27 @@ alias o="open"
 alias oo="open ."
 alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achievements
 alias sf='symfony'
+alias b='bin/behat'
 alias tree='tree -C'
 
- alias zshconfig="subl ~/.zshrc"
- alias ohmyzsh="subl ~/.oh-my-zsh"
+# vagrant environment
+alias vs='vagrant status'
+alias vssh='vagrant ssh'
+alias vu='vagrant up'
+alias vh='vagrant halt'
 
+# EDITAR CONFIGURACIONES....
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$VEDITOR ~/.oh-my-zsh"
+alias vimrc="$EDITOR ~/.vimrc"
+alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
+alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
+alias httpdconf='sudo $EDITOR /etc/apache2/httpd.conf'
+alias phpini='sudo $EDITOR /usr/local/etc/php/5.6/php.ini'
+
+#UPDATES
+alias csu='composer self-update'
+alias sfu='symfony self-update'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -63,8 +82,8 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
@@ -130,15 +149,17 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
-alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
-alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
-alias httpdconf='sudo $EDITOR /etc/apache2/httpd.conf'
-alias phpini='sudo $EDITOR /usr/local/etc/php/5.6/php.ini'
-alias csu='composer self-update'
-alias sfu='sudo symfony self-update'
 
 alias jboss='/usr/local/Cellar/jboss/jboss-eap-6.2/bin/standalone.sh'
 alias mysql='/usr/local/mysql/bin/mysql'
 
 #safety first
 alias rm='rm -i'
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+

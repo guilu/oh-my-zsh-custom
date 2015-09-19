@@ -2,19 +2,19 @@
 	"segments": {
 		"left": [
 			{
+				"function": "powerline.segments.common.time.date",
+				"args": {
+					"format": "%H:%M",
+        			"istime": true
+				}
+			},
+			{
 				"function": "powerline.segments.common.net.hostname",
 				"priority": 20
 			},
 			{
 				"function": "powerline.segments.common.env.user",
 				"priority": 30
-			},
-			{
-				"function": "powerline.segments.common.time.date",
-				"args": {
-        			"format": "%H:%M",
-        			"istime": true
-				}
 			},
 			{
 				"function": "powerline.segments.common.env.virtualenv",

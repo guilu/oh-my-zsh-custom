@@ -1,4 +1,7 @@
-# Create a new directory and enter it (take)
+# Create a new directory and enter it
+function mkd() {
+  mkdir -p "$@" && cd "$_";
+}
 
 # find shorthand
 function f() {
@@ -341,4 +344,11 @@ function speedtest(){
        echo $'Indica el tamaño del fichero de prueba: speedtest <tam> \n\tDonde tam es 10,100,1000.' >&2
   fi
   
+}
+
+
+function  camerausedby() {
+    echo "Checking to see who is using the iSight camera… 📷"
+    usedby=$(lsof | grep -w "AppleCamera\|VDC\|iSight" | awk '{printf $2"\n"}' | xargs ps)
+    echo -e "Recent camera uses:\n$usedby"
 }

@@ -1,10 +1,10 @@
 {
         "name": "DiegoBarrioH colors for solarized dark terminal colors",
         "groups": {
-                "date":               { "fg": "gray13", "bg": "royalblue5" },
-                "time:divider":       { "fg": "gray13", "bg": "royalblue5" },
+                "date":               { "fg": "skyblue1", "bg": "blue" },
+                "time:divider":       { "fg": "skyblue1", "bg": "blue" },
 
-                "user":               { "fg": "oldlace", "bg": "blue" },
+                "user":               { "fg": "blue", "bg": "skyblue1" },
                 "superuser":          { "fg": "oldlace", "bg": "red", "attr": ["bold"] },
                 "virtualenv":         { "fg": "oldlace", "bg": "green" },
                 "branch:divider":     { "fg": "gray13", "bg": "royalblue5" },
