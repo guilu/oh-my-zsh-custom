@@ -40,7 +40,7 @@
                 "deleted_cached":                    { "fg": "royalblue5", "bg": "red" },
                 "untracked":                         { "fg": "royalblue5", "bg": "cyan" },
                 "tagged":                            { "fg": "royalblue5", "bg": "yellow" },
-                "stashed":                           { "fg": "royalblue5", "bg": "darkblue" },
+                "stashed":                           { "fg": "royalblue5", "bg": "white" },
                 "deatached":                         { "fg": "red", "bg": "red" },
                 "commits:behind":                    { "fg": "yellow", "bg": "brightyellow" },
 

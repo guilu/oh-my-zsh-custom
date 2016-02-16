@@ -26,6 +26,7 @@ alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achie
 alias sf='symfony'
 alias b='bin/behat'
 alias tree='tree -C'
+alias gl="gulp"
 
 # vagrant environment
 alias vs='vagrant status'
@@ -148,7 +149,6 @@ done
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
-
 
 alias jboss='/usr/local/Cellar/jboss/jboss-eap-6.2/bin/standalone.sh'
 alias mysql='/usr/local/mysql/bin/mysql'

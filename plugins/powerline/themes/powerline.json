@@ -11,12 +11,21 @@
 	},
 	"spaces": 1,
 	"segment_data": {
+		"time": {
+			"before": " "
+		},
+		"date": {
+			"before": " "
+			},
+		"user": {
+			"before": " "
+		},
 		"branch": {
-			"before": " "
+			"before": ""
 		},
 		"cwd": {
 			"args": {
-				"ellipsis": "⋯"
+				"ellipsis": "…"
 			}
 		},
 
@@ -33,14 +42,6 @@
 				}
 			}
 		},
-
-		"time": {
-			"before": " "
-		},
-		"date": {
-			"before": " "
-			},
-
 		"powerline.segments.common.net.network_load": {
 			"args": {
 				"recv_format": "⬇ {value:>8}",
