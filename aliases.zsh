@@ -150,7 +150,8 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
-alias jboss='/usr/local/Cellar/jboss/jboss-eap-6.2/bin/standalone.sh'
+
+alias jboss='/usr/local/opt/jboss/bin/standalone.sh'
 alias mysql='/usr/local/mysql/bin/mysql'
 
 #safety first
