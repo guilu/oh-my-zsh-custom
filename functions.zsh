@@ -352,3 +352,14 @@ function  camerausedby() {
     usedby=$(lsof | grep -w "AppleCamera\|VDC\|iSight" | awk '{printf $2"\n"}' | xargs ps)
     echo -e "Recent camera uses:\n$usedby"
 }
+
+function varnish(){
+  sudo /usr/local/bin/varnishd -n /usr/local/var/varnish -f /usr/local/etc/varnish/default.vcl -s malloc,1G  -a 0.0.0.0:80
+}
+
+
+function getip() { (traceroute $1 2>&1 | head -n 1 | cut -d\( -f 2 | cut -d\) -f 1) }
+
+function docker() {
+    /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh
+}
