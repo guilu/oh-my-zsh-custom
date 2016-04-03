@@ -360,6 +360,6 @@ function varnish(){
 
 function getip() { (traceroute $1 2>&1 | head -n 1 | cut -d\( -f 2 | cut -d\) -f 1) }
 
-function docker() {
+function docker_start() {
     /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh
 }
