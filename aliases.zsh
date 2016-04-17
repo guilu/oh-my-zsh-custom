@@ -27,6 +27,7 @@ alias sf='symfony'
 alias b='bin/behat'
 alias tree='tree -C'
 alias gl="gulp"
+alias dm="docker-machine"
 
 # vagrant environment
 alias vs='vagrant status'
