@@ -354,7 +354,19 @@ function  camerausedby() {
 }
 
 function varnish(){
-  sudo /usr/local/bin/varnishd -n /usr/local/var/varnish -f /usr/local/etc/varnish/default.vcl -s malloc,1G  -a 0.0.0.0:80
+  case "$1" in
+  "start")
+    #load
+    sudo /usr/local/bin/varnishd -n /usr/local/var/varnish -f /usr/local/etc/varnish/default.vcl -s malloc,1G  -a 0.0.0.0:80  
+  ;;
+  "stop")
+    #unload
+    sudo pkill varnishd
+  ;;
+  *)
+    echo "Usa: {start|stop}" >&2
+  ;;
+esac
 }
 
 
