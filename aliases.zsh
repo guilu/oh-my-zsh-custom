@@ -28,6 +28,7 @@ alias b='bin/behat'
 alias tree='tree -C'
 alias gl="gulp"
 alias dm="docker-machine"
+alias ij="open -a /Applications/IntelliJ\ IDEA\ 15.app"
 
 # vagrant environment
 alias vs='vagrant status'

@@ -259,6 +259,14 @@ function git_change_author_name
     fi
 }
 
+#borrar un fichero de la historia de git
+function git_purge_one_file
+{
+  git filter-branch --force --index-filter \
+'git rm --cached --ignore-unmatch $1' \
+--prune-empty --tag-name-filter cat -- --all
+}
+
 #tamaño de una carpeta
 tam(){
     du -sh $1
