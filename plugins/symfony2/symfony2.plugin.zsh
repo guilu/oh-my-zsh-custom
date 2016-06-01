@@ -14,14 +14,13 @@ _symfony2 () {
 
 compdef _symfony2 '`_symfony_console`'
 compdef _symfony2 'app/console'
-compdef _symfony2 'bin/console'
 compdef _symfony2 sf2
 
 #Alias
 alias sf2='`_symfony_console`'
-alias sfcl='sf2 cache:clear'
-alias sfsr='sf2 server:run -vvv'
-alias sfcw='sf2 cache:warmup'
-alias sfroute='sf2 router:debug'
-alias sfcontainer='sf2 container:debug'
-alias sfgb='sf2 generate:bundle'
+alias sf2cl='sf2 cache:clear'
+alias sf2sr='sf2 server:run -vvv'
+alias sf2cw='sf2 cache:warmup'
+alias sf2route='sf2 router:debug'
+alias sf2container='sf2 container:debug'
+alias sf2gb='sf2 generate:bundle'

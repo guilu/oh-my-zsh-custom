@@ -26,6 +26,7 @@
                 "weather_conditions":                       { "fg": "oldlace", "bg": "green" },
                 "weather":                                  { "fg": "oldlace", "bg": "green" },
 
+                "remote":                            { "fg": "gray13", "bg": "royalblue5" },
                 "branch":                            { "fg": "gray13", "bg": "royalblue5" },
                 "branch_dirty":                      { "fg": "royalblue5", "bg": "brightestorange" },
                 "branch_clean":                      { "fg": "royalblue5", "bg": "green" },
@@ -40,7 +41,7 @@
                 "deleted_cached":                    { "fg": "royalblue5", "bg": "red" },
                 "untracked":                         { "fg": "royalblue5", "bg": "cyan" },
                 "tagged":                            { "fg": "royalblue5", "bg": "yellow" },
-                "stashed":                           { "fg": "royalblue5", "bg": "white" },
+                "stashed":                           { "fg": "blue", "bg": "skyblue1" },
                 "deatached":                         { "fg": "red", "bg": "red" },
                 "commits:behind":                    { "fg": "yellow", "bg": "brightyellow" },
 

@@ -24,10 +24,10 @@ alias o="open"
 alias oo="open ."
 alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achievements
 alias sf='symfony'
-alias b='bin/behat'
 alias tree='tree -C'
 alias gl="gulp"
 alias dm="docker-machine"
+alias bdd="vendor/bin/behat"
 
 # vagrant environment
 alias vs='vagrant status'
