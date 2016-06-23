@@ -16,7 +16,7 @@ export ACHIEVEMENTSLOGFILE="$HOME/code/git-achievements/.git-achievements.log"
 export PATH=$PATH:/Users/diegobarrioh/code/git-achievements
 
 #java home puesto a 1.7
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JBOSS_HOME=/usr/local/Cellar/jboss/jboss-eap-6.2
 export PATH=$JAVA_HOME/bin:$PATH
 

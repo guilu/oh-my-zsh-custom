@@ -32,5 +32,5 @@
 #9.   executable with setgid bit set
 #10.  directory writable to others, with sticky bit
 #11.  directory writable to others, without sticky bit
-export LSCOLORS="exgxcxdxCxegedabagacad"
+export LSCOLORS="exgxcxdxCxegedabagacea"
 #default is      exfxcxdxbxegedabagacad
