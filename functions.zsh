@@ -383,3 +383,19 @@ function getip() { (traceroute $1 2>&1 | head -n 1 | cut -d\( -f 2 | cut -d\) -f
 function dockercli() {
     /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh
 }
+
+function docker_mysql_local() {
+  if [[ -n "$4" ]]; then
+  MYSQL_ROOT_PASSWORD=$1
+  MYSQL_DATABASE=$2
+  MYSQL_USER=$3
+  MYSQL_PASSWORD=$4
+  container_id=$(docker run -it -d --name mysql -v /Users/diegobarrioh/data/mysql:/var/lib/mysql -p 3306:3306 mysql)
+  else
+    echo $'usa: docker_mysql_local MYSQL_ROOT_PASSWORD MYSQL_DATABASE MYSQL_USER MYSQL_PASSWORD' >&2
+  fi
+}
+
+function delete_all_stopped_containers(){
+  docker ps -aq | xargs docker rm
+}

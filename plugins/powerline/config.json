@@ -1,6 +1,6 @@
 {
 	"common": {
-		"term_truecolor": false
+		"term_truecolor": true
 	},
 	"ext": {
 		"ipython": {
@@ -29,8 +29,8 @@
 			"theme": "default"
 		},
 		"vim": {
-			"colorscheme": "solarized",
-			"theme": "cmdwin",
+			"colorscheme": "default",
+			"theme": "default",
 			"local_themes": {
 				"__tabline__": "tabline",
 

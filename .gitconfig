@@ -1,0 +1,159 @@
+[alias]
+    c = commit -am
+    s = status -sb
+    b = branch
+    ch = checkout
+    up = pull
+    p = push
+    f = fetch
+    r = remote
+    #diff en la consola
+    df = diff --color --color-words --abbrev
+    #pretty logs
+    l = log --graph --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(green)%cr%C(reset) %C(black)(%an)%C(reset)'
+    lg = log --graph --pretty=format:' %C(black)%h%C(reset) -%C(yellow)%d%C(white) %s %C(black)(%cr) %C(black) %an%Creset'
+    l1w = log --since=1.weeks --oneline --graph
+    l2w = log --since=2.weeks --oneline --graph
+    l1m = log --since=1.month --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(blue)%cr%C(reset) - %C(black)%an%C(reset)'
+
+    #pushes & pulles
+    pom = push origin master
+    fom = fetch origin master
+    dom = pull origin master
+    
+    pod = push origin develop
+    fod = fetch origin develop
+    dod = pull origin develop
+
+    #difftol
+    d = difftool
+    da = difftool -d
+    dac = difftool -d --cached
+
+    # Non-verbose status
+    st = status --short --branch
+
+    # List the last commits of each branch, sorted by date
+    last-branches = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+    lastb = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+
+    # Smarter blame ignores white space (-w), moving text (-M) and  moving text into other files (-C)
+    bl = blame -wMC
+
+    # Undo
+    undo = reset --soft HEAD^
+    revert = revert HEAD
+
+    # Undo a `git push`
+    undopush = push -f origin HEAD^:master
+
+    # Stand-up! Shows a list of what I worked on yesterday so I can be prepared for my stand-up meeting.
+    standup = "!git log --since yesterday  --author `git config user.email` --pretty=oneline"
+
+    # Prints a list of all files ignored
+    ignored = ls-files --others -i --exclude-standard
+
+    # List all available aliases
+    aliases = config --get-regexp ^alias
+
+    # Word diff
+    diffw = diff --word-diff=plain
+
+    # Rename a branch
+    rename-current-branch = "!f() { current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout --quiet -b $1 && git branch --quiet -d $current_branch; }; f "
+    rename-branch = "!f() { git branch $2 $1 && git branch --quiet -d $1; }; f" git
+
+    # Rename properties of a commit
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f "
+
+    # amend the last commit, using the same commit message
+    amend = commit --amend -C HEAD
+
+    # lists the files I'm about to commit
+    this = diff --cached --name-only
+    thisv = diff --cached --stat
+
+[branch]
+    autosetuprebase = always
+    autosetupmerge = always
+
+[color]
+    ui = always
+
+[core]
+    excludesfile = ~/.gitignore_global
+    attributesfile = ~/.gitattributes
+
+[color "branch"]
+    current = cyan reverse
+    local = yellow
+    remote = cyan
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+    insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"
+
+# Any GitHub repo with my username should be checked out r/w by default
+# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
+[url "git@github.com:guilu/"]
+    insteadOf = "git://github.com/guilu/"
+
+[user]
+    name = Diego Barrio H
+    email = diegobarrioh@gmail.com
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+    keepBackup = false
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+
+[mergetool]
+    keepBackup = true
+	prompt = false
+
+[merge]
+	tool = Kaleidoscope
+
+[credential]
+    helper = osxkeychain
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

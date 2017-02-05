@@ -1,5 +1,5 @@
-export EDITOR='vim'
-export VEDITOR='subl'
+export EDITOR='subl'
+export VEDITOR='vim'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -9,6 +9,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias cd..="cd .."
+alias lt="ls -ltr"
 
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
@@ -22,12 +23,13 @@ alias m="mvn"
 alias s="subl ."
 alias o="open"
 alias oo="open ."
-alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achievements
+alias g='git' #git-achievements: https://github.com/guilu/git-achievements
 alias sf='symfony'
 alias tree='tree -C'
 alias gl="gulp"
 alias dm="docker-machine"
 alias bdd="vendor/bin/behat"
+alias di="docker images"
 
 # vagrant environment
 alias vs='vagrant status'
@@ -37,14 +39,15 @@ alias vh='vagrant halt'
 
 # EDITAR CONFIGURACIONES....
 alias zshconfig="$EDITOR ~/.zshrc"
-alias ohmyzsh="$VEDITOR ~/.oh-my-zsh"
-alias vimrc="$EDITOR ~/.vimrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias vimrc="$VEDITOR ~/.vimrc"
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
-alias httpdconf='sudo $EDITOR /etc/apache2/httpd.conf'
+alias httpdconf='sudo $EDITOR /usr/local/etc/apache2/2.4/httpd.conf'
 alias phpini='sudo $EDITOR /usr/local/etc/php/5.6/php.ini'
 
 #UPDATES
+alias composer='php -n -d memory_limit=-1 /usr/local/bin/composer'
 alias csu='composer self-update'
 alias sfu='symfony self-update'
 
@@ -153,7 +156,6 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 
 alias jboss='/usr/local/opt/jboss/bin/standalone.sh'
-alias mysql='/usr/local/mysql/bin/mysql'
 
 #safety first
 alias rm='rm -i'
@@ -165,3 +167,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
+
+#quick cd into common folders
+alias www='cd /Users/diegobarrioh/www'

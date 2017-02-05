@@ -1,25 +1,18 @@
 #PYTHON(powerline)
 export PATH=$PATH:/Users/diegobarrioh/Library/Python/2.7/bin
 
-#php
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-#and sbin before bin
+#sbin before bin
 export PATH="/usr/local/sbin:$PATH"
-#composer require --global
+
+#global composer en el path
 export PATH="/Users/diegobarrioh/.composer/vendor/bin:$PATH"
 
-#GIT ACHIEVEMENTS LOG FILES
-export ACTIONLOGFILE="$HOME/code/git-achievements/.git-achievements-action.log"
-export ACHIEVEMENTSLOGFILE="$HOME/code/git-achievements/.git-achievements.log"
+#Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-#git-achievements
-export PATH=$PATH:/Users/diegobarrioh/code/git-achievements
-
-#java home puesto a 1.7
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
-export JBOSS_HOME=/usr/local/Cellar/jboss/jboss-eap-6.2
+#version de java 1.7/1.8...
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$JAVA_HOME/bin:$PATH
+#export JBOSS_HOME=/usr/local/Cellar/jboss/jboss-eap-6.2
 
 #gnu core utils
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
