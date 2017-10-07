@@ -396,6 +396,17 @@ function docker_mysql_local() {
   fi
 }
 
+function docker_pgsql_local() {
+  if [[ -n "$3" ]]; then
+  POSTGRES_PASSWORD=$1
+  POSTGRES_DB=$2
+  POSTGRES_USER=$3
+  container_id=$(docker run -it -d --name pgsql -v /Users/diegobarrioh/data/pgsql:/var/lib/postgresql/data -p 5432:5432 postgres)
+  else
+    echo $'usa: docker_pgsql_local PGSQL_ROOT_PASSWORD PGSQL_DATABASE PGSQL_USER' >&2
+  fi
+}
+
 function delete_all_stopped_containers(){
   docker ps -aq | xargs docker rm
 }

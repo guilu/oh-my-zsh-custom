@@ -1,4 +1,4 @@
-export EDITOR='subl'
+export EDITOR='vim'
 export VEDITOR='vim'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
@@ -44,7 +44,7 @@ alias vimrc="$VEDITOR ~/.vimrc"
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
 alias httpdconf='sudo $EDITOR /usr/local/etc/apache2/2.4/httpd.conf'
-alias phpini='sudo $EDITOR /usr/local/etc/php/5.6/php.ini'
+alias phpini='sudo $EDITOR /usr/local/etc/php/7.0/php.ini'
 
 #UPDATES
 alias composer='php -n -d memory_limit=-1 /usr/local/bin/composer'
@@ -58,7 +58,7 @@ alias sudo='sudo '
 alias gurl="curl --compressed"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update -n /usr/local/bin'
 
 # IP addresses
 #alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
