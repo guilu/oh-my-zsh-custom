@@ -36,6 +36,6 @@
 #default is      exfxcxdxbxegedabagacad
 #export LSCOLORS="exgxcxdxCxegedabagacad"
 #if [ ! -f ~/.dircolors ]; then
-ln -fs $ZSH/custom/dircolors.256dark ~/.dircolors
+ln -fs $ZSH/custom/dircolors.ansidark ~/.dircolors
 #fi
-eval "$(gdircolors $ZSH/custom/dircolors.256dark)"
+eval "$(gdircolors $ZSH/custom/dircolors.ansidark)"
