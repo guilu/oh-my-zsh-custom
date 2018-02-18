@@ -32,5 +32,10 @@
 #9.   executable with setgid bit set
 #10.  directory writable to others, with sticky bit
 #11.  directory writable to others, without sticky bit
-export LSCOLORS="exgxcxdxCxegedabagacea"
+
 #default is      exfxcxdxbxegedabagacad
+#export LSCOLORS="exgxcxdxCxegedabagacad"
+#if [ ! -f ~/.dircolors ]; then
+ln -fs $ZSH/custom/dircolors.256dark ~/.dircolors
+#fi
+eval "$(gdircolors $ZSH/custom/dircolors.256dark)"
