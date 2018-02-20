@@ -206,7 +206,7 @@ EXEC 01;31  # Unix
 ### Text formats
 
 # Text that we can edit with a regular editor
-.txt 32
+.txt 1;33
 .org 32
 .md 32
 .mkd 32
@@ -264,7 +264,7 @@ EXEC 01;31  # Unix
 .pod 32
 .tex 32
 .go 32
-.sql 32
+.sql 33
 .csv 32
 .sv 32
 .svh 32
