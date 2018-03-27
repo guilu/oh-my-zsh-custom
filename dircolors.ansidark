@@ -168,7 +168,7 @@ DIR 34
 # 777 directory
 OTHER_WRITABLE 34;40
 # symbolic link
-LINK 35
+LINK 36
 
 # pipe, socket, block device, character device (blue bg)
 FIFO 30;44
@@ -188,7 +188,7 @@ ORPHAN  05;37;41
 MISSING 05;37;41
 
 # files with execute permission
-EXEC 01;31  # Unix
+EXEC 01;32  # Unix
 .cmd 01;31  # Win
 .exe 01;31  # Win
 .com 01;31  # Win
@@ -206,9 +206,9 @@ EXEC 01;31  # Unix
 ### Text formats
 
 # Text that we can edit with a regular editor
-.txt 32
-.org 32
-.md 32
+.txt 01;33
+.org 33
+.md 01;33
 .mkd 32
 
 # Source text
@@ -230,8 +230,8 @@ EXEC 01;31  # Unix
 .java 32
 .pl 32
 .pm 32
-.py 32
-.rb 32
+.py 1;35
+.rb 1;35
 .hs 32
 .php 32
 .htm 32
@@ -246,6 +246,7 @@ EXEC 01;31  # Unix
 .scss 32
 .less 32
 .js 32
+.json 1;33
 .coffee 32
 .man 32
 .0 32
