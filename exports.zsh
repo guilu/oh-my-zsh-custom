@@ -1,3 +1,6 @@
+export LC_ALL=es_ES.UTF-8
+export LANG=es_ES.UTF-8
+
 #PYTHON(powerline)
 export PATH=$PATH:/Users/diegobarrioh/Library/Python/2.7/bin
 
