@@ -410,3 +410,15 @@ function docker_pgsql_local() {
 function delete_all_stopped_containers(){
   docker ps -aq | xargs docker rm
 }
+
+function colors(){
+  for x in {0..1}; do 
+    for i in {30..37}; do 
+        for a in {40..47}; do 
+            echo -ne "\e[$x;$i;$a""m \\\e[$x;$i;$a""m \e[0;37;40m "
+        done
+        echo
+    done
+    echo
+done
+}
