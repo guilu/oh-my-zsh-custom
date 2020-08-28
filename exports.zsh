@@ -19,3 +19,4 @@ export PATH=$JAVA_HOME/bin:$PATH
 #export JBOSS_HOME=/usr/local/Cellar/jboss/jboss-eap-6.2
 
 #gnu core utils
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
