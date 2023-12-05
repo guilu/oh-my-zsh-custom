@@ -1,5 +1,5 @@
-export EDITOR='vim'
-export VEDITOR='vim'
+export EDITOR='nvim'
+export VEDITOR='nvim'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -9,16 +9,23 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias cd..="cd .."
+
+alias ls='gls --color=auto'
+
 alias lt="ls -ltr"
+alias ll='ls -l'
+alias la='ls -a'
+
+alias l='ls -alh'
+alias ld='lsd'
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias c="cd ~/code"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
 alias h="history"
 alias j="java -jar"
-alias v="vim"
+alias v="nvim"
 alias m="mvn"
 alias s="subl ."
 alias o="open"
@@ -27,24 +34,21 @@ alias g='git' #git-achievements: https://github.com/guilu/git-achievements
 alias sf='symfony'
 alias tree='tree -C'
 alias gl="gulp"
-alias dm="docker-machine"
+alias dc="docker-compose"
 alias bdd="vendor/bin/behat"
 alias di="docker images"
+alias py="python3"
 
-# vagrant environment
-alias vs='vagrant status'
-alias vssh='vagrant ssh'
-alias vu='vagrant up'
-alias vh='vagrant halt'
 
 # EDITAR CONFIGURACIONES....
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
-alias vimrc="$VEDITOR ~/.vimrc"
+alias vimrc="$EDITOR ~/.vimrc"
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
 alias httpdconf='sudo $EDITOR /usr/local/etc/apache2/2.4/httpd.conf'
 alias phpini='sudo $EDITOR /usr/local/etc/php/7.0/php.ini'
+alias aliases='$EDITOR ~/.oh-my-zsh/custom/aliases.zsh'
 
 #UPDATES
 alias composer='php -n -d memory_limit=-1 /usr/local/bin/composer'
@@ -57,6 +61,9 @@ alias sudo='sudo '
 # Gzip-enabled `curl`
 alias gurl="curl --compressed"
 
+alias cat='/opt/homebrew/bin/bat'
+alias catn='/bin/cat'
+alias catnl='/opt/homebrew/bin/bat --paging=never'
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update -n /usr/local/bin'
 
@@ -100,7 +107,7 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # Trim new lines and copy to clipboard
-alias c='pygmentize -O style=monokai -f console256 -g'
+alias pyg='pygmentize -O style=monokai -f console256 -g'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -170,3 +177,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 #quick cd into common folders
 alias www='cd /Users/diegobarrioh/www'
+
+#quick access to VisualStudioCode on terminal
+alias vs='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias idea='/Applications/Intellij\ IDEA.app/Contents/MacOS/idea'

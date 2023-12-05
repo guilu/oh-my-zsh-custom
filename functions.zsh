@@ -3,6 +3,11 @@ function mkd() {
   mkdir -p "$@" && cd "$_";
 }
 
+# Functions
+function mkt(){
+	mkdir {nmap,content,exploits,scripts}
+}
+
 # find shorthand
 function f() {
     find . -iname "*$1*" ${@:2}
@@ -386,10 +391,10 @@ function dockercli() {
 
 function docker_mysql_local() {
   if [[ -n "$4" ]]; then
-  MYSQL_ROOT_PASSWORD=$1
-  MYSQL_DATABASE=$2
-  MYSQL_USER=$3
-  MYSQL_PASSWORD=$4
+  export MYSQL_ROOT_PASSWORD=$1
+  export MYSQL_DATABASE=$2
+  export MYSQL_USER=$3
+  export MYSQL_PASSWORD=$4
   container_id=$(docker run -it -d --name mysql -v /Users/diegobarrioh/data/mysql:/var/lib/mysql -p 3306:3306 mysql)
   else
     echo $'usa: docker_mysql_local MYSQL_ROOT_PASSWORD MYSQL_DATABASE MYSQL_USER MYSQL_PASSWORD' >&2
@@ -441,4 +446,50 @@ function mkicns() {
         iconutil -c icns "$filename".iconset
         rm -r "$filename".iconset
     fi
+}
+
+
+function tmuxea() {
+	ssh -t $1 "/usr/bin/tmux -u -CC attach || tmux -CC"
+}
+
+# Extract nmap information
+function extractPorts(){
+	ports="$(cat $1 | ggrep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
+	ip_address="$(cat $1 | ggrep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
+	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
+	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
+	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
+	echo $ports | tr -d '\n' | pbcopy 
+	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
+	cat extractPorts.tmp; rm -f extractPorts.tmp
+}
+
+function zshaddhistory() {
+    local line=${1%%$'\n'}
+    local cmd=${line%% *}
+    # Only those that satisfy all of the following conditions are added to the history
+    [[ ${#line} -ge 5
+       && ${cmd} != ll
+       && ${cmd} != ls
+       && ${cmd} != la
+       && ${cmd} != cd
+       && ${cmd} != man
+       && ${cmd} != scp
+       && ${cmd} != vim
+       && ${cmd} != nvim
+       && ${cmd} != less
+       && ${cmd} != ping
+       && ${cmd} != open
+       && ${cmd} != file
+       && ${cmd} != which
+       && ${cmd} != whois
+       && ${cmd} != drill
+       && ${cmd} != uname
+       && ${cmd} != md5sum
+       && ${cmd} != pacman
+       && ${cmd} != xdg-open
+       && ${cmd} != traceroute
+       && ${cmd} != speedtest-cli
+    ]]
 }

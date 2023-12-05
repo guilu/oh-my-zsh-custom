@@ -17,9 +17,9 @@
     l1m = log --since=1.month --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(blue)%cr%C(reset) - %C(black)%an%C(reset)'
 
     #pushes & pulles
-    pom = push origin master
-    fom = fetch origin master
-    dom = pull origin master
+    pom = push origin main
+    fom = fetch origin main
+    dom = pull origin main
     
     pod = push origin develop
     fod = fetch origin develop
@@ -45,7 +45,7 @@
     revert = revert HEAD
 
     # Undo a `git push`
-    undopush = push -f origin HEAD^:master
+    undopush = push -f origin HEAD^:main
 
     # Stand-up! Shows a list of what I worked on yesterday so I can be prepared for my stand-up meeting.
     standup = "!git log --since yesterday  --author `git config user.email` --pretty=oneline"
@@ -157,3 +157,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[pull]
+	ff = only
