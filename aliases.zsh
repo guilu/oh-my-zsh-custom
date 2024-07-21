@@ -38,6 +38,7 @@ alias dc="docker-compose"
 alias bdd="vendor/bin/behat"
 alias di="docker images"
 alias py="python3"
+alias vim="nvim"
 
 
 # EDITAR CONFIGURACIONES....
