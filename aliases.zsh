@@ -182,3 +182,9 @@ alias www='cd /Users/diegobarrioh/www'
 #quick access to VisualStudioCode on terminal
 alias vs='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 alias idea='/Applications/Intellij\ IDEA.app/Contents/MacOS/idea'
+alias grd='./gradlew'
+
+
+alias npmi='npm i'
+alias nrs='npm run start'
+alias ngp='ng serve --proxy-config proxy.conf.json'
